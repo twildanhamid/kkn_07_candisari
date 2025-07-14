@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Program KKN - KKN 07</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body data-bs-theme="light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><b>KKN 07</b></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link " href="index.html">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">Profil Desa</a></li>
+        <li class="nav-item"><a class="nav-link active" href="programs.html">Program</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Galeri</a></li>
+        <li class="nav-item"><a class="nav-link" href="team.html">Tim</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+      </ul>
+      <button id="toggleMode" class="btn btn-outline-light ms-3">🌙</button>
+    </div>
+  </div>
+</nav>
+
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Program KKN 07</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Pendidikan</h5>
+            <ul>
+              <li>Bimbingan belajar anak-anak</li>
+              <li>Pelatihan komputer dasar</li>
+              <li>Penyuluhan karakter</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Kesehatan</h5>
+            <ul>
+              <li>Posyandu lansia</li>
+              <li>Pemeriksaan kesehatan gratis</li>
+              <li>Senam bersama</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Ekonomi</h5>
+            <ul>
+              <li>Pelatihan produk lokal</li>
+              <li>Pemasaran digital UMKM</li>
+              <li>Pembukuan sederhana</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-primary text-white text-center py-3 mt-auto">
+  <p>&copy; 2025 KKN Kelompok 07</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const btn=document.getElementById('toggleMode');
+  btn.onclick=()=>{const b=document.body,c=b.getAttribute('data-bs-theme');b.setAttribute('data-bs-theme',c==='light'?'dark':'light');btn.textContent=c==='light'?'☀️':'🌙'};
+</script>
+</body>
+</html>
