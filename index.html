@@ -1,72 +1,134 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>KKN 07 - Desa Candi Sari</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body data-bs-theme="light" class="d-flex flex-column min-vh-100">
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html"><b>KKN 07</b></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">Profil Desa</a></li>
-          <li class="nav-item"><a class="nav-link" href="programs.html">Program</a></li>
-          <li class="nav-item"><a class="nav-link" href="gallery.html">Galeri</a></li>
-          <li class="nav-item"><a class="nav-link" href="team.html">Tim</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
-        </ul>
-        <button id="toggleMode" class="btn btn-outline-light ms-3">🌙</button>
-      </div>
-    </div>
-  </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KKN 07 - Desa Candi Sari | Universitas Muhammadiyah Lamongan</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body data-bs-theme="light" class="d-flex flex-column min-vh-100">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">KKN 07</a>
 
-  <!-- Header -->
-  <header class="bg-primary text-white text-center py-5">
-    <div class="container">
-      <h1>KKN Kelompok 07</h1>
-      <p>Desa Candi Sari, Kecamatan Sambeng - Universitas [Nama Universitas]</p>
-    </div>
-  </header>
-
-  <!-- Main Section -->
-  <section class="py-5">
-    <div class="container text-center">
-      <h2 class="mb-4">Selamat Datang di Website KKN 07</h2>
-      <p>Kunjungi menu di atas untuk melihat detail program, tim, galeri, dan informasi lainnya.</p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-primary text-white text-center py-3 mt-auto">
-            <div class="container text-center">
-            <p>&copy; 2023 KKN Kelompok 07 - Desa Candi Sari, Kecamatan Sambeng</p>
-            <p>Universitas [Nama Universitas]</p>
-            <div class="social-icons mt-3">
-                <a href="#" class="text-white mx-2"><i class="fab fa-instagram fa-lg"></i></a>
-                <a href="#" class="text-white mx-2"><i class="fab fa-youtube fa-lg"></i></a>
-                <a href="#" class="text-white mx-2"><i class="fas fa-envelope fa-lg"></i></a>
-            </div>
+        <div class="d-flex align-items-center ms-auto">
+          <button
+            id="toggleMode"
+            class="btn btn-outline-light me-2"
+            aria-label="Toggle dark mode"
+          >
+            🌙
+          </button>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
-  </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    const btn = document.getElementById('toggleMode');
-    btn.onclick = () => {
-      const body = document.body;
-      const current = body.getAttribute('data-bs-theme');
-      body.setAttribute('data-bs-theme', current === 'light' ? 'dark' : 'light');
-      btn.textContent = current === 'light' ? '☀️' : '🌙';
-    };
-  </script>
-</body>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Profil Desa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="programs.html">Program</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Galeri</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="team.html">Tim</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Kontak</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-5">
+      <div class="container">
+        <h1 class="fw-bold">KKN Kelompok 07</h1>
+        <p class="mb-0">
+          Desa Candi Sari, Kecamatan Sambeng - Universitas Muhammadiyah Lamongan
+        </p>
+      </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="flex-grow-1">
+      <section class="py-5">
+        <div class="container text-center">
+          <h2 class="mb-4 text-primary fw-bold">
+            Selamat Datang di Website KKN 07
+          </h2>
+          <p class="lead">
+            Temukan informasi lengkap tentang program kerja, profil desa,
+            dokumentasi kegiatan, dan anggota tim KKN Kelompok 07.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white text-center py-3 mt-auto">
+      <div class="container">
+        <p class="mb-1">
+          &copy; <span id="year"></span> KKN Kelompok 07 - Desa Candi Sari,
+          Kecamatan Sambeng
+        </p>
+        <p class="mb-2">Universitas Muhammadiyah Lamongan</p>
+        <div>
+          <a href="https://wa.me/628563399453" target="_blank" class="text-white mx-2  d-none d-sm-inline-block">
+            <i class="fab fa-whatsapp fa-lg"></i>
+          </a>
+          <a href="https://instagram.com/kknumla07_candisari" target="_blank" class="text-white mx-2 d-none d-sm-inline-block">
+            <i class="fab fa-instagram fa-lg"></i>
+          </a>
+          <a href="https://tiktok.com/@KKN_UMLA07_CANDISARI" target="_blank" class="text-white mx-2 d-none d-sm-inline-block">
+            <i class="fab fa-tiktok fa-lg"></i>
+          </a>
+          <a href="mailto:kkn07candisari@gmail.com" class="text-white mx-2 d-none d-sm-inline-block">
+            <i class="fas fa-envelope fa-lg"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Dark/Light mode toggle
+      const btn = document.getElementById("toggleMode");
+      btn.onclick = () => {
+        const body = document.body;
+        const current = body.getAttribute("data-bs-theme");
+        const newMode = current === "light" ? "dark" : "light";
+        body.setAttribute("data-bs-theme", newMode);
+        btn.textContent = newMode === "light" ? "🌙" : "☀️";
+      };
+
+      // Tahun dinamis di footer
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
