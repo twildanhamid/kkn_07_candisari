@@ -13,37 +13,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <style>
-      .rating {
-        display: flex;
-        justify-content: center;
-        margin: 20px 0;
-      }
-      .rating input {
-        display: none;
-      }
-      .rating label {
-        cursor: pointer;
-        font-size: 2rem;
-        color: #ddd;
-        margin: 0 5px;
-      }
-      .rating input:checked ~ label {
-        color: #ffc107;
-      }
-      .rating label:hover,
-      .rating label:hover ~ label {
-        color: #ffc107;
-      }
-      .thank-you {
-        display: none;
-        text-align: center;
-        padding: 20px;
-        background-color: #f8f9fa;
-        border-radius: 5px;
-        margin-top: 20px;
-      }
-    </style>
   </head>
   <body data-bs-theme="light" class="d-flex flex-column min-vh-100">
     <!-- Navbar -->
@@ -141,70 +110,6 @@
             >
             </iframe>
           </div>
-
-          <!-- Form Kepuasan Masyarakat -->
-          <div class="card mt-5 shadow">
-            <div class="card-header bg-primary text-white">
-              <h4 class="mb-0 text-center">Survey Kepuasan Masyarakat</h4>
-            </div>
-            <div class="card-body">
-              <form id="satisfactionForm">
-                <div class="row">
-                  <div class="col-md-6 mb-3">
-                    <label for="name" class="form-label">Nama (Opsional)</label>
-                    <input type="text" class="form-control" id="name" placeholder="Masukkan nama Anda">
-                  </div>
-                  <div class="col-md-6 mb-3">
-                    <label for="position" class="form-label">Jabatan</label>
-                    <select class="form-select" id="position">
-                      <option value="" selected>Pilih Jabatan</option>
-                      <option value="Kepala Desa">Kepala Desa</option>
-                      <option value="Sekretaris Desa">Sekretaris Desa</option>
-                      <option value="Perangkat Desa">Perangkat Desa</option>
-                      <option value="Babinsa">Babinsa</option>
-                      <option value="Bhabinkamtibmas">Bhabinkamtibmas</option>
-                      <option value="RT/RW">RT/RW</option>
-                      <option value="Karang Taruna">Karang Taruna</option>
-                      <option value="Masyarakat Umum">Masyarakat Umum</option>
-                    </select>
-                  </div>
-                </div>
-                
-                <div class="mb-3">
-                  <label class="form-label">Seberapa puas Anda dengan kegiatan KKN di Desa Candi Sari?</label>
-                  <div class="rating">
-                    <input type="radio" id="star5" name="rating" value="5">
-                    <label for="star5">★</label>
-                    <input type="radio" id="star4" name="rating" value="4">
-                    <label for="star4">★</label>
-                    <input type="radio" id="star3" name="rating" value="3">
-                    <label for="star3">★</label>
-                    <input type="radio" id="star2" name="rating" value="2">
-                    <label for="star2">★</label>
-                    <input type="radio" id="star1" name="rating" value="1">
-                    <label for="star1">★</label>
-                  </div>
-                  <div class="d-flex justify-content-between">
-                    <small>Tidak Puas</small>
-                    <small>Sangat Puas</small>
-                  </div>
-                </div>
-                
-                <div class="mb-3">
-                  <label for="feedback" class="form-label">Komentar/Saran (Opsional)</label>
-                  <textarea class="form-control" id="feedback" rows="3" placeholder="Masukkan komentar atau saran Anda"></textarea>
-                </div>
-                
-                <button type="submit" class="btn btn-primary w-100">Kirim</button>
-              </form>
-              
-              <div id="thankYouMessage" class="thank-you">
-                <i class="fas fa-check-circle text-success fa-3x mb-3"></i>
-                <h5>Terima Kasih Atas Masukan Anda!</h5>
-                <p>Kami sangat menghargai waktu yang Anda luangkan untuk memberikan penilaian.</p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
     </main>
@@ -246,38 +151,6 @@
         );
         btn.textContent = current === "light" ? "☀️" : "🌙";
       };
-
-      // Set current year in footer
-      document.getElementById('year').textContent = new Date().getFullYear();
-
-      // Handle satisfaction form submission
-      document.getElementById('satisfactionForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = {
-          name: document.getElementById('name').value,
-          position: document.getElementById('position').value,
-          rating: document.querySelector('input[name="rating"]:checked')?.value,
-          feedback: document.getElementById('feedback').value
-        };
-        
-        // In a real application, you would send this data to a server
-        console.log('Form data submitted:', formData);
-        
-        // Show thank you message
-        document.getElementById('thankYouMessage').style.display = 'block';
-        this.reset();
-        
-        // Hide the form
-        this.style.display = 'none';
-        
-        // After 5 seconds, show the form again
-        setTimeout(() => {
-          document.getElementById('thankYouMessage').style.display = 'none';
-          this.style.display = 'block';
-        }, 5000);
-      });
     </script>
   </body>
 </html>
